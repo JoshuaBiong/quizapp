@@ -60,7 +60,10 @@ class _HomepageState extends State<Homepage> {
   }
 
   void reset() {
-    print(totalResult++);
+    setState(() {
+      questionIndex = 0;
+      totalResult = 0;
+    });
   }
 
   @override
