@@ -15,7 +15,7 @@ class _HomepageState extends State<Homepage> {
       'questionText': "What is the Largest planet?",
       'answers': [
         {'text': 'Mars', 'score': 0},
-        {'text': 'Jupiter', 'score': 10},
+        {'text': 'Jupiter', 'score': 1},
         {'text': 'Earth', 'score': 0},
         {'text': 'Neptune', 'score': 0},
       ]
@@ -26,7 +26,7 @@ class _HomepageState extends State<Homepage> {
         {'text': 'Mercury', 'score': 0},
         {'text': 'Earth', 'score': 0},
         {'text': 'Mars', 'score': 0},
-        {'text': 'Venus', 'score': 10},
+        {'text': 'Venus', 'score': 1},
       ]
     },
     {
@@ -34,7 +34,7 @@ class _HomepageState extends State<Homepage> {
       'answers': [
         {'text': 'Mars', 'score': 0},
         {'text': 'Jupiter', 'score': 0},
-        {'text': 'Mercury', 'score': 10},
+        {'text': 'Mercury', 'score': 1},
         {'text': 'Uranus', 'score': 0},
       ]
     },
@@ -56,7 +56,7 @@ class _HomepageState extends State<Homepage> {
       //   print("answer is wrongg");
       // }
     });
-    print(totalResult);
+    // print(totalResult);
   }
 
   void reset() {
@@ -75,7 +75,11 @@ class _HomepageState extends State<Homepage> {
               answerQuestions: answerQuestions,
               questionIndex: questionIndex,
             )
-          : Result(result: totalResult, resetQuiz: reset),
+          : Result(
+              result: totalResult,
+              resetQuiz: reset,
+              outof: questions.length,
+            ),
     );
   }
 }
